@@ -1,0 +1,86 @@
+/* Contenedor principal */
+.productDescription {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    width: 350px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    overflow-y: auto;
+    transition: transform 1s ease-in-out;
+    z-index: 100;
+    transform: translateX(0%);
+  }
+  
+  .closeDescription {
+    display: none;
+  }
+  
+  /* Botón de cerrar */
+  .cerrar{
+    position: static;
+    font-size: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    color: red;
+    border: 1px solid red;
+    border-radius: 50%;
+    transition: 1s;
+  }
+  
+  .cerrar svg {
+    width: 40px;
+    height: 40px;
+    transition: 1s;
+  }
+  
+  .cerrar:hover svg {
+    color: red;
+    color: white;
+    transform: scale(1.2);
+  }
+  
+  /* Título */
+  .productDescription h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Contenedor de la imagen y la descripción */
+  .productDescription h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Imagen del producto */
+  .productDescription img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .productDescription img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Descripción del producto */
+  .productDescription span {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+    color: #666;
+    padding: 0 10px;
+  }
+  

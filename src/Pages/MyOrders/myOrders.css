@@ -1,0 +1,48 @@
+.contenedorDeProductos{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+
+.ordenCheck {
+  background: linear-gradient(to right, #007bff, #087792); /* Azul a morado */
+  color: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  margin: 10px;
+}
+
+.ordenCheck:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.botonOrden {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.botonOrden p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: white;
+}
+.botonOrden p svg{
+  width: 30px;
+}
+
+.botonOrden h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+

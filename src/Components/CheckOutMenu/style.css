@@ -1,0 +1,172 @@
+.checkoutMenu{
+    background-color: rgb(17 5 127 / 50%);
+    width: 95%;
+    max-width: 500px;
+    position: fixed;
+    top: 86px;
+    right: 0px;
+    padding: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.checkoutMenu .contenedorCheck{
+    background: #babcbf;
+    width: 95%;
+    height: 80vh;
+    border: 1px inset;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    overflow-y: scroll;
+}
+.checkoutMenu h1{
+    color: black;
+    font-size: 25px;
+    line-height: 1.1;
+}
+
+.checkoutMenu h3{
+    color: black;
+    font-size: 15px;
+}
+
+.cerrar{
+    position: static;
+    font-size: 20px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px inset black;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.cerrar:hover{
+    background-color: red;
+    transform: rotate(90deg);
+}
+
+.closeMenu{
+    display: none;
+}
+
+.itemCheck {
+    padding: 10px;
+    margin-right: 35px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.itemCheck img{
+    width: 8vw;
+    min-width: 100px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.itemCheck h2{
+    color: black;
+    font-size: 17px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+.itemCheck .precio{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-top: 10px;
+}
+
+.datos{
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+@keyframes mover {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+.datos .unidades{
+    width: 35px;
+    color: black;
+    cursor: pointer;
+    transition: 1s;
+    margin: 0 15px;
+}
+.datos .unidades:hover{
+    color: rgb(78, 93, 223);
+    cursor: pointer;
+    animation: mover 0.5s infinite ease-in-out;
+}
+
+.botones{
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+
+.botones p{
+    font-size: 30px;
+    color: black;
+}
+
+.borrar{    
+    width: 35px;
+    color: black;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.borrar:hover{
+    color: red;
+}
+
+.contenedorTotal{
+    display: flex    ;
+    justify-content: flex-end;
+}
+
+.total{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.totalResult{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-top: 10px;
+}
+.checkOut{
+    border-radius: 8px;
+    width: 100%;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
+.checkOut:hover{
+    background-color: #01460c;
+}

@@ -1,0 +1,150 @@
+/* Contenedor del navbar */
+.navbar-container {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex    ;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 20px;
+    background: #327ebf;
+    color: black;
+    
+}
+
+/* Logo */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Lista de enlaces */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+.nav-links li a {
+    color: black;
+}
+
+.nav-links li {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: 0.3s;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-links li:hover {
+    background-color: rgb(47, 53, 138);
+    color: white;
+}
+
+/* Icono del carrito */
+.cart {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cart .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Botón del menú hamburguesa */
+.menu-icon {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-icon .icon {
+    width: 30px;
+    height: 30px;
+    color: #333;
+}
+
+/* Menú móvil */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu.open {
+    display: flex;
+    padding: 10px 0;
+    margin-top: 22px;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+}
+
+.mobile-menu ul div{
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mobile-menu li {
+    margin: 10px 0;
+    color: black;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    transition: 1s;
+    padding: 5px;
+}
+.mobile-menu li:hover{
+    background-color: rgb(141, 149, 196);
+}
+
+.mobile-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+div ul .nav-links-hamb{
+    display: block;
+}
+div ul .nav-links-hamb li{
+    cursor: pointer;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 1000px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}

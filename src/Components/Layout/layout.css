@@ -1,0 +1,42 @@
+.layout{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contenedorFiltro {
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+    margin: 55px 0;  
+    padding: 10px;
+    background-color: #f1f1f1; 
+    border-radius: 10px; 
+}
+  
+
+.filtro {
+    color: black;
+    width: 75%;
+    max-width: 400px; 
+    padding: 10px 15px;
+    border: 2px solid #ccc; 
+    border-radius: 8px; 
+    background-color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+  
+.filtro:hover {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filtro:focus {
+    outline: none;
+    border-color: #007bff; 
+    background-color: white; 
+    box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.3); 
+}
+  
+  
