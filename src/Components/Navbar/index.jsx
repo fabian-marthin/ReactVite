@@ -19,10 +19,22 @@ const Navbar = () => {
 
         {/* Categorías visibles en pantallas grandes */}
         <ul className="nav-links">
+          <li 
+            onClick={()=> {
+              context.setCategoriasYaFiltradas(context.items)
+              context.setMenuOpen(false)
+            }}
+          >
+            All
+          </li>
           {(context.categorias ?? []).map((item, index) => (
             <li 
                 key={index}
-                onClick={()=> console.log("hola ", item)}  
+                onClick={()=>{
+                  context.categorias(item)
+    
+                  context.setMenuOpen(false)
+                }}
             >
               {item}
             </li>
@@ -50,13 +62,24 @@ const Navbar = () => {
           {/* Categorías en menú móvil */}
           <div>
             <ul className="nav-links-hamb">
+              <li 
+                onClick={()=> {
+                  context.setCategoriasYaFiltradas(context.items)
+                  context.setMenuOpen(false)
+                }}
+              >
+                All
+              </li>
                 {(context.categorias ?? []).map((item, index) => (
-                    <li 
-                        key={index}
-                        onClick={()=> console.log("hola ", item)}    
-                    >
+                  <li 
+                    key={index}
+                    onClick={()=>{
+                      context.setCategoriaBuscar(item)
+                      context.setMenuOpen(false)
+                    }}   
+                  >
                     {item}
-                    </li>
+                  </li>
                 ))}
             </ul>
           </div>

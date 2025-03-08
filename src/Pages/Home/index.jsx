@@ -9,34 +9,6 @@ import { ShoppingCartContext } from "../../Context/index.jsx";
 
 function Home() {
   const context = React.useContext(ShoppingCartContext);
-  const { category } = useParams(); // Obtener la categoría desde la URL
-
-  // Aplicar filtro por categoría
-  const productosFiltrados = category
-    ? (context.items ?? []).filter((item) => item.category === category)
-    : context.items ?? [];
-
-  // Aplicar filtro por búsqueda de texto
-  const valorFiltro = context.filtro?.toLowerCase() ?? ""; 
-
-  const buscadorItems = productosFiltrados.filter((item) => 
-    item.title.toLowerCase().includes(valorFiltro)
-  );
-
-  /* categorias disponibles */
-
-  const obtenerValoresUnicos = (array, clave) => {
-    if (!array || !Array.isArray(array)) return []; // Validar que sea un array válido
-    return [...new Set(array.map(item => item[clave]?.name).filter(Boolean))];
-  };
-  
-  const categoriasUnicas = obtenerValoresUnicos(context.items, "category");
-
-  if (context.categorias === undefined) {
-    context.setCategorias(categoriasUnicas)
-  }else if(context.categorias.length === 0){
-    context.setCategorias(categoriasUnicas)
-  }
 
   return (
     <aside>
@@ -53,9 +25,9 @@ function Home() {
       </div>
 
       <Layout>
-        {buscadorItems.map((item) => (
-          <Card key={item.id} data={item} />
-        ))}
+      {context.resultados?.map((item) => (
+        <Card key={item.id} data={item} />
+      ))}
         <ProductDescription />
         <CheckOutMenu />
       </Layout>
