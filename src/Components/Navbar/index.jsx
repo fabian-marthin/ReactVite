@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { ShoppingBagIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-
+import { HomeIcon } from "@heroicons/react/24/solid";
 import { ShoppingCartContext } from "../../Context";
 import "./navbar.css";
 
