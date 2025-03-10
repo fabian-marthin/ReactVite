@@ -5,7 +5,7 @@ body{
     min-width: 320px;
     min-height: 100vh;
     align-items: flex-start;
-    background: white;
+    background: #b9bec2;
     padding-top: 50px;
     display: flex;
     justify-content: center;
