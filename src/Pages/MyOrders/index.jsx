@@ -37,7 +37,16 @@ const MyOrders = () => {
         </div>
       );
     } else {
-      return <p>No tenemos órdenes</p>;
+      return (
+        <div>
+          <p>No tenemos órdenes</p>;
+          <div className="spinner-container">
+            <div className="spinner"></div>
+            <p className="loading-text">Esperando órdenes...</p>
+          </div>
+        </div>
+        
+      )
     }
   }
 

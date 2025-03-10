@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <header className="navbar-container">
       <nav className="navbar">
-        <div className="logo">Martin</div>
+        <div className="logo">MartinClothes</div>
 
         {/* Categorías visibles en pantallas grandes */}
         <ul className="nav-links">
@@ -25,20 +25,19 @@ const Navbar = () => {
               context.setMenuOpen(false)
             }}
           >
-            All
+            <NavLink to="/" onClick={toggleMenu}>All</NavLink>
           </li>
           {(context.categorias ?? []).map((item, index) => (
-            <li 
-                key={index}
-                onClick={()=>{
-                  context.categorias(item)
-    
-                  context.setMenuOpen(false)
-                }}
-            >
-              {item}
-            </li>
-          ))}
+                  <li 
+                    key={index}
+                    onClick={()=>{
+                      context.setCategoriaBuscar(item)
+                      context.setMenuOpen(false)
+                    }}   
+                  >
+                    <NavLink to="/" onClick={toggleMenu}>{item}</NavLink>
+                  </li>
+                ))}
         </ul>
 
         {/* Enlaces de navegación */}
@@ -68,7 +67,7 @@ const Navbar = () => {
                   context.setMenuOpen(false)
                 }}
               >
-                All
+                <NavLink to="/" onClick={toggleMenu}>All</NavLink>
               </li>
                 {(context.categorias ?? []).map((item, index) => (
                   <li 
@@ -78,7 +77,7 @@ const Navbar = () => {
                       context.setMenuOpen(false)
                     }}   
                   >
-                    {item}
+                    <NavLink to="/" onClick={toggleMenu}>{item}</NavLink>
                   </li>
                 ))}
             </ul>

@@ -34,9 +34,6 @@
 }
 .nav-links li a {
     color: black;
-}
-
-.nav-links li {
     text-decoration: none;
     color: #333;
     font-size: 16px;
@@ -46,7 +43,7 @@
     cursor: pointer;
 }
 
-.nav-links li:hover {
+.nav-links li a:hover {
     background-color: rgb(47, 53, 138);
     color: white;
 }
